@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
-import { ButtonGroup, Button, Checkbox, FormControlLabel, TextField, Typography, Container, Grid, Paper } from '@material-ui/core';
-import { Save, Delete } from '@material-ui/icons';
+import { ButtonGroup, Button, Checkbox, FormControlLabel, TextField, Typography, Container, Grid, Paper, AppBar, Toolbar, IconButton } from '@material-ui/core';
+import { Save, Delete, Menu } from '@material-ui/icons';
 
 import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 import { green, orange } from '@material-ui/core/colors';
@@ -71,6 +71,20 @@ function App() {
       <Container maxWidth="xs">
         <div className="App">      
           <header className="App-header">
+              <AppBar color="secondary">
+                <Toolbar>
+                  <IconButton>
+                    <Menu />
+                  </IconButton>
+                  <Typography variant="h6">
+                    MUI Themeing
+                  </Typography>
+                  <Button>
+                    Login
+                  </Button>
+                </Toolbar>
+              </AppBar>
+
             <Typography variant="h2">
               Yay Material-UI!!
             </Typography>
